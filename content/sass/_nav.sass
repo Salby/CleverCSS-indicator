@@ -44,8 +44,9 @@ nav.navbar
         transition: all 0.2s
         font-size: 14px
         color: $red100
+      &:active
+        background-color: $red600
     .button-cat.cat-active
-      background-color: $red600
       span
         color: $white
         font-weight: bold
@@ -60,7 +61,6 @@ nav.navbar
       height: 3px
       background-color: $white
 
-
 @media only screen and (max-width: 480px)
   nav.navbar-tall
     height: 56px
@@ -74,6 +74,8 @@ nav.navbar
       .button-cat
         &:hover
           background-color: $red600
+        &:active
+          background-color: $red700
       .button-cat.cat-active
         background-color: $red500
         &:hover
