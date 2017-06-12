@@ -43,17 +43,21 @@ nav.navbar
       justify-content: space-around
       align-items: center
       span
-        transition: all 0.2s
+        -webkit-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+        -moz-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+        transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
         font-size: 14px
         color: $red100
       &:active
-        background-color: $red600
+        background-color: $transparentDark
     .button-cat.cat-active
       span
         color: $white
         font-weight: bold
     .cat-indicator
-      transition: all 0.2s
+      -webkit-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+      -moz-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+      transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
       position: fixed
       top: auto
       right: auto
@@ -76,15 +80,17 @@ nav.navbar
       height: 56px
       .button-cat
         &:hover
-          background-color: $red600
+          background-color: $transparentDark
         &:active
-          background-color: $red700
+          background-color: $transparentDarker
       .button-cat.cat-active
-        background-color: $red500
+        background-color: $transparentDark
         &:hover
-          background-color: $red600
+          background-color: $transparentDarker
       .cat-indicator
-        transition: all 0.2s
+        -webkit-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+        -moz-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+        transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
         display: block
         position: fixed
         top: calc(112px - 3px)
