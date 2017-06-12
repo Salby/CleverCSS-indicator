@@ -1,0 +1,123 @@
+/*TEAL */
+/*RED */
+nav.navbar-dark {
+  background-color: #f44336; }
+
+.drawer .drawer-content .drawer-header.drawer-dark {
+  background-color: #f44336; }
+.drawer .drawer-content .drawer-nav li {
+  color: #ffffff; }
+  .drawer .drawer-content .drawer-nav li a {
+    color: #ffffff; }
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0; }
+  nav.navbar .navbar-cats {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 11;
+    display: flex;
+    justify-content: space-around; }
+    nav.navbar .navbar-cats .button-cat {
+      cursor: pointer;
+      transition: all 0.2s;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: #f44336;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      nav.navbar .navbar-cats .button-cat span {
+        transition: all 0.2s;
+        font-size: 14px;
+        color: #ffcdd2; }
+    nav.navbar .navbar-cats .button-cat.cat-active {
+      background-color: #e53935; }
+      nav.navbar .navbar-cats .button-cat.cat-active span {
+        color: #ffffff;
+        font-weight: bold; }
+    nav.navbar .navbar-cats .cat-indicator {
+      transition: all 0.2s;
+      position: fixed;
+      top: auto;
+      right: auto;
+      bottom: calc(70px - 3px);
+      left: auto;
+      width: 33.33%;
+      height: 3px;
+      background-color: #ffffff; }
+
+@media only screen and (max-width: 480px) {
+  nav.navbar-tall {
+    height: 56px; } }
+@media only screen and (min-width: 481px) {
+  nav.navbar .navbar-cats {
+    top: 56px;
+    bottom: auto;
+    height: 56px; }
+    nav.navbar .navbar-cats .button-cat:hover {
+      background-color: #e53935; }
+    nav.navbar .navbar-cats .button-cat.cat-active {
+      background-color: #f44336; }
+      nav.navbar .navbar-cats .button-cat.cat-active:hover {
+        background-color: #e53935; }
+    nav.navbar .navbar-cats .cat-indicator {
+      transition: all 0.2s;
+      display: block;
+      position: fixed;
+      top: calc(112px - 3px);
+      left: auto;
+      width: 33.33%;
+      height: 3px;
+      background-color: #ffffff; } }
+@media only screen and (min-width: 769px) {
+  nav.navbar .navbar-cats {
+    top: 60px;
+    left: 25%;
+    width: 50%;
+    height: 60px; }
+    nav.navbar .navbar-cats .cat-indicator {
+      top: calc(120px - 3px);
+      width: 16.66%; } }
+/* FLEXBOX LAYOUT */
+.flex-row {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .flex-row .box {
+    width: 10vw;
+    height: 10vw;
+    background-color: #26a69a; }
+
+.navbar-flex {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #009688;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  .navbar-flex .flex-item {
+    width: 28px;
+    height: 28px;
+    margin: 14px;
+    background-color: #26a69a; }
+
+/*# sourceMappingURL=master.css.map */

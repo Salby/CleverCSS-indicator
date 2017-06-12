@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="theme-color" content="#f44336">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>FlexBox</title>
+    <!--CLEVERCSS STYLESHEET-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/SanderSalamander/CleverCSS/2577c395/clever.css">
+    <!--LOCAL STYLESHEET-->
+    <link rel="stylesheet" href="content/css/master.css">
+    <!--MATERIAL ICONS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+
+    <!--NAVIGATION START-->
+    <nav class="navbar navbar-tall navbar-dark">
+      <button id="drawer-open" class="drawer-open-left"><i class="material-icons">menu</i></button>
+      <div class="navbar-cats">
+        <button class="button-cat cat-active"><span>CATEGORY 1</span></button>
+        <button class="button-cat"><span>CATEGORY 2</span></button>
+        <button class="button-cat"><span>CATEGORY 3</span></button>
+        <div class="cat-indicator"></div>
+      </div>
+    </nav>
+    <div id="mobile-drawer" class="drawer drawer-left">
+      <div class="drawer-content drawer-light">
+        <div class="drawer-header drawer-dark">
+          <button id="drawer-close"><i class="material-icons">arrow_back</i></button>
+        </div>
+        <ul class="drawer-nav drawer-nav-left">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--NAVIGATION END-->
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--CLEVERCSS SCRIPT-->
+    <script src="https://cdn.rawgit.com/SanderSalamander/CleverCSS/a4c0c19b/clever.js"></script>
+    <!--CAT CONTROL-->
+    <script src="content/js/cat-control.js"></script>
+  </body>
+</html>
