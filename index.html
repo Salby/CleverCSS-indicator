@@ -18,9 +18,9 @@
     <nav class="navbar navbar-tall navbar-dark">
       <button id="drawer-open" class="drawer-open-left"><i class="material-icons">menu</i></button>
       <div class="navbar-cats">
-        <button class="button-cat cat-active"><span>CATEGORY 1</span></button>
-        <button class="button-cat"><span>CATEGORY 2</span></button>
-        <button class="button-cat"><span>CATEGORY 3</span></button>
+        <button data-target="#cat1" class="button-cat cat-active"><span>CATEGORY 1</span></button>
+        <button data-target="#cat2" class="button-cat"><span>CATEGORY 2</span></button>
+        <button data-target="#cat3" class="button-cat"><span>CATEGORY 3</span></button>
         <div class="cat-indicator"></div>
       </div>
     </nav>
@@ -35,6 +35,29 @@
       </div>
     </div>
     <!--NAVIGATION END-->
+
+    <!--CAT 1 START-->
+    <section id="cat1" class="section-cat">
+      <div class="flex-grid">
+        <div class="card card-light card-hover-4 flex-item"></div>
+        <div class="card card-light card-hover-4 flex-item"></div>
+        <div class="card card-light card-hover-4 flex-item"></div>
+        <div class="card card-light card-hover-4 flex-item"></div>
+      </div>
+    </section>
+    <!--CAT 1 END-->
+
+    <!--CAT 2 START-->
+    <section id="cat2" class="section-cat cat-hide">
+
+    </section>
+    <!--CAT 2 END-->
+
+    <!--CAT 3 START-->
+    <section id="cat3" class="section-cat cat-hide">
+
+    </section>
+    <!--CAT 3 END-->
 
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

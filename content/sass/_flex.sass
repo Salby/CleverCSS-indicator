@@ -1,37 +1,55 @@
 /* FLEXBOX LAYOUT*/
 
-.flex-row
+.flex-grid
   width: 100vw
-  height: 100vh
+  height: calc(100vh - (56px + 70px))
   display: flex
-  flex-direction: row
-  justify-content: space-around
-  align-items: center
-  .box
-    width: 10vw
-    height: 10vw
-    background-color: $teal400
-
-.navbar-flex
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  height: 56px
-  background-color: $teal500
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  align-items: center
+  flex-flow: column wrap
+  justify-content: flex-start
+  align-items: flex-start
+  padding: 0 0 70px 0
   .flex-item
-    width: 28px
-    height: 28px
-    margin: 14px
-    background-color: $teal400
+    opacity: 0
+    animation: floatIn 1s forwards
+    animation-delay: 0s
+    z-index: 1
+    width: 48%
+    min-height: 40%
+    margin: 1%
+    &:nth-child(2)
+      min-height: 50%
+      animation-delay: 0.1s
+    &:nth-child(3)
+      min-height: 50%
+      animation-delay: 0.2s
+    &:nth-child(4)
+      min-height: 40%
+      animation-delay: 0.3s
+    &:hover
+      z-index: 2
 
-@media only screen and (min-width: 400px)
+@media only screen and (min-width: 480px)
 
-@media only screen and (min-width: 401px) and (max-width: 960px)
+@media only screen and (min-width: 481px)
+
+@media only screen and (min-width: 769px)
+  .flex-grid
+    width: 50%
+    height: calc(100vh - 120px)
+    margin: auto
+    .flex-item
+      width: 48%
+      min-height: 200px
+      margin: 1%
 
 @media only screen and (min-width: 961px)
+
+@media only screen and (min-width: 1201px)
+
+@keyframes floatIn
+  0%
+    transform: translateY(56px)
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1

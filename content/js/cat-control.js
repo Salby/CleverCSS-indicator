@@ -9,10 +9,15 @@ $(document).ready(function() {
 
     var indicatorPos = $(this).offset().left;
     $('.cat-indicator').css('left', indicatorPos);
+
+    var target = $(this).data('target');
+    $(target).siblings().addClass('cat-hide');
+    $(target).removeClass('cat-hide');
   });
 
   $(window).resize(function() {
-    $('.cat-indicator').css('left', indicatorPos_start);
+  // var indicatorPos_resize = $('.cat-active').offset()left;
+    $('.cat-indicator').css('left', indicatorPos_resize);
   });
 
 });
