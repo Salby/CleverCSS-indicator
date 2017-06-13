@@ -1,5 +1,8 @@
 nav.navbar-dark
   background-color: $red500
+  -webkit-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+  -moz-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+  transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
 
 .drawer
   .drawer-content
@@ -51,7 +54,7 @@ nav.navbar
         background-color: $transparentDark
     .button-cat.cat-active
       span
-        color: $white
+        color: $white !important
         font-weight: bold
     .cat-indicator
       -webkit-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)

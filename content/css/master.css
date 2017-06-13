@@ -1,7 +1,11 @@
 /*TEAL */
 /*RED */
+/*BLUE */
 nav.navbar-dark {
-  background-color: #f44336; }
+  background-color: #f44336;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .drawer .drawer-content .drawer-header.drawer-dark {
   background-color: #f44336; }
@@ -47,7 +51,7 @@ nav.navbar {
       nav.navbar .navbar-cats .button-cat:active {
         background-color: rgba(0, 0, 0, 0.05); }
     nav.navbar .navbar-cats .button-cat.cat-active span {
-      color: #ffffff;
+      color: #ffffff !important;
       font-weight: bold; }
     nav.navbar .navbar-cats .cat-indicator {
       -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -88,7 +92,8 @@ nav.navbar {
     z-index: 1;
     display: inline-block;
     width: 100%;
-    margin: 0 0 8px 0; }
+    margin: 0 0 8px 0;
+    cursor: pointer; }
     .flex-grid .flex-item:nth-child(2) {
       animation-delay: 0.2s; }
     .flex-grid .flex-item:nth-child(3) {
@@ -140,9 +145,18 @@ nav.navbar {
     max-height: 200px;
     overflow: hidden; }
   .card .card-header {
-    border-radius: 2px 2px 0 0; }
+    border-radius: 2px 2px 0 0;
+    position: relative; }
     .card .card-header h2 {
       float: left; }
+      .card .card-header h2::before {
+        position: relative;
+        top: -5px;
+        right: 10px;
+        float: right;
+        content: "username";
+        font-size: 12px;
+        opacity: 0.5; }
     .card .card-header p {
       float: left; }
   .card .card-header.card-light h2 {
@@ -160,7 +174,12 @@ nav.navbar {
 
 @media only screen and (max-width: 320px) {
   .flex-grid {
-    column-count: 1; } }
+    column-count: 1; }
+
+  .card.card-hover-3:hover {
+    box-shadow: none !important; }
+  .card.card-hover-3:active {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important; } }
 @media only screen and (min-width: 481px) {
   .flex-grid {
     column-count: 2;

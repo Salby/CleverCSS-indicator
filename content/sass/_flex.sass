@@ -13,6 +13,7 @@
     display: inline-block
     width: 100%
     margin: 0 0 8px 0
+    cursor: pointer
     &:nth-child(2)
       animation-delay: 0.2s
     &:nth-child(3)
@@ -65,8 +66,17 @@
     overflow: hidden
   .card-header
     border-radius: 2px 2px 0 0
+    position: relative
     h2
       float: left
+      &::before
+        position: relative
+        top: -5px
+        right: 10px
+        float: right
+        content: 'username'
+        font-size: 12px
+        opacity: 0.5
     p
       float: left
   .card-header.card-light
@@ -86,6 +96,11 @@
 @media only screen and (max-width: 320px)
   .flex-grid
     column-count: 1
+  .card.card-hover-3
+    &:hover
+      box-shadow: none !important
+    &:active
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important
 
 @media only screen and (min-width: 481px)
   .flex-grid
