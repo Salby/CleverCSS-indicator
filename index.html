@@ -396,9 +396,11 @@
           var colorLight = $(this).data('color-light');
           // alert(color);
           $('.navbar-dark, .drawer-dark').css('background-color', colorMain);
-          $('meta[name="theme-color"]').attr('content', colorMain);
           $('.button-cat span').css('color', colorLight);
           $('.button-flat').css('color', colorMain);
+          setTimeout(function() {
+            $('meta[name="theme-color"]').attr('content', colorMain);
+          }, 300);
         });
       });
     </script>
