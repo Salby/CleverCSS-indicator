@@ -8,13 +8,112 @@ section.section-cat
 section.section-cat.cat-hide
   display: none
 
+.card-display
+  position: fixed
+  top: 56px
+  right: auto
+  bottom: auto
+  left: 0
+  width: 100%
+  height: calc(100vh - 56px)
+  z-index: 14
+  background-color: $white
+  box-shadow: none
+  transform: translateY(100%)
+  -webkit-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+  -moz-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+  transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+  overflow-y: auto
+  .card-header
+    min-height: 56px
+    width: 100%
+    position: relative
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 13
+    h2
+      color: $white
+      font-family: 'Roboto Mono', sans-serif
+  .header-background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 56px
+    background-color: rgba(0,0,0,0.4)
+    opacity: 0.5
+    z-index: 12
+  p
+    margin: calc(12px + 56px) 12px 12px 12px
+    padding: 12px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    border-radius: 2px
+  .card-image
+    width: 100%
+    height: auto
+  .card-footer
+    position: absolute
+    top: auto
+    right: auto
+    bottom: 0
+    left: 0
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+  .button-close
+    cursor: pointer
+    position: absolute
+    top: 0
+    right: 0
+    bottom: auto
+    left: auto
+    width: 56px
+    height: 56px
+    border-radius: 100%
+    border: 10px solid transparent
+    background-clip: padding-box
+    background-color: transparent
+
+    -webkit-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+    -moz-transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+    transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+    z-index: 15
+    &:active
+      background-color: $transparentDarker
+    i
+      position: absolute
+      top: calc(50% - 12px)
+      left: calc(50% - 12px)
+      color: $white
+.card-display.card-display-active
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.16), 0 -3px 6px rgba(0,0,0,0.23)
+  transform: translateY(0)
+
+
 @media only screen and (max-width: 480px)
 
 @media only screen and (min-width: 481px)
+  .card-display
+    left: calc(50% - 240px)
+    width: 480px
+  .card-display.card-display-active
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+    border-radius: 4px 4px 0 0
 
 @media only screen and (min-width: 769px)
   section.section-cat
     padding: 120px 0 0 0
+  .card-display
+    left: calc(50% - 384px)
+    width: 768px
+    .button-close
+      &:hover
+        background-color: $transparentDark
+      &:active
+        background-color: $transparentDarker
 
 @media only screen and (min-width: 961px)
 

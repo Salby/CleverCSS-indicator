@@ -94,32 +94,6 @@ nav.navbar {
     width: 100%;
     margin: 0 0 8px 0;
     cursor: pointer; }
-    .flex-grid .flex-item:nth-child(2) {
-      animation-delay: 0.4s; }
-    .flex-grid .flex-item:nth-child(3) {
-      animation-delay: 0.7s; }
-    .flex-grid .flex-item:nth-child(4) {
-      animation-delay: 1s; }
-    .flex-grid .flex-item:nth-child(5) {
-      animation-delay: 1.3s; }
-    .flex-grid .flex-item:nth-child(6) {
-      animation-delay: 0.2s; }
-    .flex-grid .flex-item:nth-child(7) {
-      animation-delay: 0.5s; }
-    .flex-grid .flex-item:nth-child(8) {
-      animation-delay: 0.8s; }
-    .flex-grid .flex-item:nth-child(9) {
-      animation-delay: 1.1s; }
-    .flex-grid .flex-item:nth-child(10) {
-      animation-delay: 0.3s; }
-    .flex-grid .flex-item:nth-child(11) {
-      animation-delay: 0.6s; }
-    .flex-grid .flex-item:nth-child(12) {
-      animation-delay: 0.9s; }
-    .flex-grid .flex-item:nth-child(13) {
-      animation-delay: 1.2s; }
-    .flex-grid .flex-item:nth-child(14) {
-      animation-delay: 1.4s; }
     .flex-grid .flex-item:hover {
       z-index: 2; }
 
@@ -147,9 +121,9 @@ nav.navbar {
         opacity: 0.5; }
     .card .card-header p {
       float: left; }
-  .card .card-header.card-light h2 {
+  .card .card-header h2 {
     color: #525252;
-    font-family: "Roboto Mono", monospace; }
+    font-family: "Roboto Mono", monospace !important; }
   .card .card-image {
     width: 100%;
     height: auto;
@@ -196,9 +170,109 @@ section.section-cat {
 section.section-cat.cat-hide {
   display: none; }
 
+.card-display {
+  position: fixed;
+  top: 56px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 56px);
+  z-index: 14;
+  background-color: #ffffff;
+  box-shadow: none;
+  transform: translateY(100%);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow-y: auto; }
+  .card-display .card-header {
+    min-height: 56px;
+    width: 100%;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 13; }
+    .card-display .card-header h2 {
+      color: #ffffff;
+      font-family: "Roboto Mono", sans-serif; }
+  .card-display .header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0.5;
+    z-index: 12; }
+  .card-display p {
+    margin: calc(12px + 56px) 12px 12px 12px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 2px; }
+  .card-display .card-image {
+    width: 100%;
+    height: auto; }
+  .card-display .card-footer {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; }
+  .card-display .button-close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    background-color: transparent;
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 15; }
+    .card-display .button-close:active {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .card-display .button-close i {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: calc(50% - 12px);
+      color: #ffffff; }
+
+.card-display.card-display-active {
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16), 0 -3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(0); }
+
+@media only screen and (min-width: 481px) {
+  .card-display {
+    left: calc(50% - 240px);
+    width: 480px; }
+
+  .card-display.card-display-active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px 4px 0 0; } }
 @media only screen and (min-width: 769px) {
   section.section-cat {
-    padding: 120px 0 0 0; } }
+    padding: 120px 0 0 0; }
+
+  .card-display {
+    left: calc(50% - 384px);
+    width: 768px; }
+    .card-display .button-close:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+    .card-display .button-close:active {
+      background-color: rgba(0, 0, 0, 0.1); } }
 body {
   width: 100vw;
   overflow-x: hidden; }

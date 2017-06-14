@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.cat-indicator').css('left', indicatorPos);
 
     //|||||||||||||||||||||||||||||||||||||||||//
-    // SECTION MANAGEMENT -DO NOT INCLUDE-
+    // SECTION MANAGEMENT --DO NOT INCLUDE--
     var target = $(this).data('target');
     $(target).siblings().addClass('cat-hide');
     $(target).removeClass('cat-hide');
